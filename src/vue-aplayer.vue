@@ -22,8 +22,8 @@
       />
       <div class="aplayer-info" v-show="!mini">
         <div class="aplayer-music">
-          <span class="aplayer-title">{{ currentMusic.title || 'Untitled' }}</span>
-          <span class="aplayer-author">{{ currentMusic.artist || 'Unknown' }}</span>
+          <span class="aplayer-title" v-html="currentMusic.title"></span>
+          <span class="aplayer-author" v-html="currentMusic.artist"></span>
         </div>
         <slot name="display" :current-music="currentMusic" :play-stat="playStat">
           <lyrics :current-music="currentMusic" :play-stat="playStat" v-if="showLrc" />
